@@ -21,12 +21,14 @@ def Sym_interface():
     return select
 
 # Hash Interface
+"""
 def Hash_interface():
     print ('### 일방향  ###')
     print ('1. 일방향(Hash)')
     print ('========================')
     select = input("# 숫자를 입력하세요 : ")
     return select
+"""
 
 # Encode Interface
 def Encode_interface():
@@ -55,11 +57,8 @@ def main():
     # 일방향
     elif sel_1 == 2:
         print ('')
-        sel_2 = int(Hash_interface())
-        if sel_2 == 1:
-            print ('')
-            print ('## 일방향 알고리즘 ##')
-            hash.hashing()
+        print ('## 일방향 알고리즘 ##')
+        hash.hashing()
                         
     # 인코딩/디코딩
     elif sel_1 == 3:

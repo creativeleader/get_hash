@@ -3,47 +3,52 @@
 import hashlib
 
 # 일방향 알고리즘
-
+# [공통]
 def MD5(plaintext):
-    m = hashlib.md5()
-    print('ddddd', m)
-    """
-    m.update(plaintext)
-    return m.hexdigest()
-    """
-"""
+    hashed = hashlib.md5(plaintext.encode())
+    return hashed
+    
 def SHA1(plaintext):
-    return 0
+    hashed = hashlib.sha1(plaintext.encode())
+    return hashed
 
 def SHA224(plaintext):
-    return 0
+    hashed = hashlib.sha224(plaintext.encode())
+    return hashed
 
 def SHA256(plaintext):
-    return 0
+    hashed = hashlib.sha256(plaintext.encode())
+    return hashed
 
 def SHA384(plaintext):
-    return 0
+    hashed = hashlib.sha384(plaintext.encode())
+    return hashed
 
 def SHA512(plaintext):
-    return 0
-"""
+    hashed = hashlib.sha512(plaintext.encode())
+    return hashed
+
+# [일본, 유럽]
+
 
 def hashing():
     plaintext = input("# 평문입력 : ")
     
+    print('[공통 : MD5, SHA1~512]')
     md5 = MD5(plaintext)
-    """
+    print('MD5    hashed: {0}'.format(md5.hexdigest()))
+    
     sha1 = SHA1(plaintext)
+    print('SHA1   hashed: {0}'.format(sha1.hexdigest()))
+    
     sha224 = SHA224(plaintext)
+    print('SHA224 hashed: {0}'.format(sha224.hexdigest()))
+    
     sha256 = SHA256(plaintext)
+    print('SHA256 hashed: {0}'.format(sha256.hexdigest()))
+    
     sha384 = SHA384(plaintext)
+    print('SHA384 hashed: {0}'.format(sha384.hexdigest()))
+    
     sha512 = SHA512(plaintext)
-    """
-    print ('[md5]: ', md5)
-    """
-    print ('[sha1]: ', sha1)
-    print ('[sha224]: ', sha224)
-    print ('[sha256]: ', sha256)
-    print ('[sha384]: ', sha384)
-    print ('[sha512]: ', sha512)
-    """
+    print('SHA256 hashed: {0}'.format(sha512.hexdigest()))    
