@@ -50,6 +50,7 @@ def main():
         if sel_2 == 1:
             print ('')
             print ('## 대칭키 암호화 ##')
+            symmetric.encrypt()
         elif sel_2 == 2:
             print ('')
             print ('## 대칭키 복호화 ##')

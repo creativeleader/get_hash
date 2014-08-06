@@ -1,5 +1,9 @@
 #-*- coding: ms949 -*-
 
+# pycrypto-2.6.1 설치해야 가능
+from Crypto.Cipher import AES
+from Crypto import Random
+
 # [공통]
 def AES128_Encrypt():
     aes128 = 0
@@ -44,9 +48,18 @@ def TDEA_Decrypt():
 
 
 # symmetric_encrypt
-def encrypt():
-    print
-    
 
+def encrypt():
+    print('test')
+    # AES
+    '''
+    key = b'Sixteen byte key'
+    iv = Random.new().read(AES.block_size)
+    cipher = AES.new(key, AES.MODE_CFB, iv)
+    msg = iv + cipher.encrypt(b'Attack at dawn')
+    
+    print (msg)
+    '''
 # symmetric_decrypt
 def decrypt():
+    print('')
