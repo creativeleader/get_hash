@@ -1,6 +1,6 @@
 #-*- coding: ms949 -*-
 
-import hash
+import hash, symmetric
 
 def main_interface():
     print ('### 대칭키/일방향/인코딩 ###')

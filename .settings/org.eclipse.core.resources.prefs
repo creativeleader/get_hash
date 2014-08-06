@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
 encoding/UI.py=ms949
 encoding/hash.py=ms949
+encoding/symmetric.py=ms949
